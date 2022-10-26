@@ -1,0 +1,7 @@
+{
+  "name": "Cinema",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
