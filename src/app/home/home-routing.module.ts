@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+  },
+  {
+    path: 'video-detail',
+    loadChildren: () => import('../views/video-detail/video-detail.module').then( m => m.VideoDetailPageModule)
+  },
 ];
 
 @NgModule({

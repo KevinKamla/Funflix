@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cinema</string>
+    <string name="title_activity_main">Cinema</string>
+    <string name="package_name">org.lincence3.groupe6</string>
+    <string name="custom_url_scheme">org.lincence3.groupe6</string>
+</resources>

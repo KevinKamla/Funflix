@@ -25,3 +25,78 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  --ion-background-color: var(--ion-color-netfly-dark)
+}
+
+.menu_grid {
+  margin-top: 50px;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  h5 {
+    font-weight: 100;
+  }
+}
+
+ion-slides {
+  height: 200px;
+  margin-top: 100px;
+
+  ion-card {
+    width: auto;
+    height: auto;
+
+    img {
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+      transform: scale(1.1, 1.1);
+      transition: 1000ms all ease-in-out;
+    }
+  }
+}
+
+.swiper-slide-active {
+  transform: scale(1.05, 1.05);
+
+  ion-card {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+
+    img {
+      width: auto;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.box-title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin: 10px 5px 5px 5px;
+
+  h3 {
+    font-weight: 100;
+    font-size: 17px;
+  }
+}
+
+.scroll-box {
+  display: flex;
+  overflow: scroll;
+}
+
+.movie {
+  margin-left: 5px;
+}
+
+.movie img {
+  height: 150px;
+  max-width: none;
+}
