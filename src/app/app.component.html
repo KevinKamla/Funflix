@@ -1,10 +1,10 @@
 <ion-app>
 
-    <ion-header [translucent]="true">
+    <ion-header [translucent]="true" color="netfly-dark">
         <ion-toolbar color="netfly-dark">
             <ion-buttons slot="start">
                 <ion-back-button></ion-back-button>
-              </ion-buttons>
+            </ion-buttons>
             <ion-title class="ion-text-center">
                 <img class="logo-header" src="../../assets/img/funflix.png">
             </ion-title>
@@ -19,31 +19,37 @@
 
     <ion-split-pane contentId="menu_cinema">
         <ion-menu contentId="menu_cinema" menuId="pearl_sale" class="bg_side" type="overlay">
-            <ion-content>
+            <ion-content color="netfly-dark">
                 <ion-menu-toggle autoHide="false">
-                    <ion-item [routerLink]="['home']">
-                        <ion-icon slot="start" name="home"></ion-icon>
-                        <ion-label> Home </ion-label>
-                    </ion-item>
+                    <div class="account">
+                        <ion-avatar>
+                            <img [src]="['assets/img/funflix.png']" />
+                        </ion-avatar>
+                        <ion-label>Name</ion-label>
+                    </div>
                 </ion-menu-toggle>
 
                 <ion-menu-toggle autoHide="false">
-                    <ion-item [routerLink]="['categorie']">
-                        <ion-icon slot="start" name="diamond-outline"></ion-icon>
+                    <ion-item [routerLink]="['categorie']" color="netfly-dark">
                         <ion-label> Category </ion-label>
                     </ion-item>
                 </ion-menu-toggle>
 
                 <ion-menu-toggle autoHide="false">
-                    <ion-item [routerLink]="['help']">
-                        <ion-icon slot="start" name="help"></ion-icon>
+                    <ion-item [routerLink]="['home']" color="netfly-dark">
+                        <ion-label> Account </ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
+
+
+                <ion-menu-toggle autoHide="false">
+                    <ion-item [routerLink]="['help']" color="netfly-dark">
                         <ion-label>Help</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
 
                 <ion-menu-toggle autoHide="false">
-                    <ion-item [routerLink]="['a-propos']">
-                        <ion-icon slot="start" name="trail-sign"></ion-icon>
+                    <ion-item [routerLink]="['a-propos']" color="netfly-dark">
                         <ion-label> About </ion-label>
                     </ion-item>
                 </ion-menu-toggle>

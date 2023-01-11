@@ -1,27 +1,69 @@
-import { Component } from '@angular/core';
-import { Network } from '@awesome-cordova-plugins/network/ngx';
+import { Component, OnInit } from '@angular/core';
+import { Network, ConnectionStatus } from '@capacitor/network';
+import { ActionSheetController, AlertController } from '@ionic/angular';
+import { BdFilmService } from './services/bd-film.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  //public disconnectSubscription : any  ;
-  //public connectSubscription : any;
+  networkStatus: ConnectionStatus;
+  constructor(
+    private serviceBD: BdFilmService,
+    private alert: AlertController,
+  ) { }
 
-  constructor(private network:Network) {}
+  async checkNetwork() {
+    this.networkStatus = await Network.getStatus();
+    console.log("this.networkStatus : ", this.networkStatus);
+  }
 
-   //this.disconnectSubscription = 
-   public disconnectSubscription = this.network.onDisconnect().subscribe( () => {
-    console.log("network was disconnected :-(");
-  }).unsubscribe();
+  async NetworkTrue() {
+    const alerte = await this.alert.create({
+      header: 'Network',
+      subHeader: 'Verification',
+      message: 'Connection restored!',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    await alerte.present();
+  }
 
-  //this.connectSubscription = 
-  public connectSubscription = this.network.onDisconnect().subscribe( () => {
-    console.log("network was connected :-(");
-  }).unsubscribe();
+  async NetworkFalse() {
+    const alerte = await this.alert.create({
+      header: 'Network',
+      subHeader: 'Verification',
+      message: 'Please check your connection',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    await alerte.present();
+  }
+
+
+  ngOnInit() {
+
+    this.serviceBD.initDataBase();
+    this.checkNetwork();
+    Network.addListener("networkStatusChange", status => {
+      this.networkStatus = status
+      if (!this.networkStatus.connected) this.NetworkFalse()
+      console.log("this.networkStatus : ", this.networkStatus);
+    })
+  }
 
 };
 

@@ -27,63 +27,80 @@
 }
 
 ion-content {
-  --ion-background-color: var(--ion-color-netfly-dark)
+  --ion-background-color: var(--ion-color-netfly-dark);
+  ion-card .container-scroll{
+    padding-left: 47px;
+  } 
 }
 
-.menu_grid {
-  margin-top: 50px;
-  position: fixed;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-
-  h5 {
-    font-weight: 100;
-  }
-}
 
 ion-slides {
-  height: 200px;
-  margin-top: 100px;
+  height: 223px; 
+  margin-top: 7px;
 
-  ion-card {
-    width: auto;
-    height: auto;
+  ion-slide {
+    width: 145px;
 
-    img {
-      object-fit: fill;
-      width: 100%;
-      height: 100%;
-      transform: scale(1.1, 1.1);
-      transition: 1000ms all ease-in-out;
+    ion-card {
+      width: auto;
+      height: auto;
+
+      .img-intro{
+        width: 300px;
+        height: 200px;
+        background-color: black;
+        
+        ion-skeleton-text{
+          height: 200px;
+          background-color: black;
+        }
+      }
+
+      img {
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.1, 1.1);
+        transition: 1000ms all ease-in-out;
+      }
     }
   }
 }
 
 .swiper-slide-active {
-  transform: scale(1.05, 1.05);
+  transform: scale(1.2, 1.2);
+  height: 245px;
+  z-index: 99;
+  ion-slide {
+    width: 268px;
 
   ion-card {
-    width: 300px;
-    height: 180px;
-    border-radius: 10px;
+    width: 310px;
+    height: 215px;
+    border-radius: 25px;
 
     img {
-      width: auto;
       transform: scale(1, 1);
     }
   }
+}
 }
 
 .box-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: white;
   margin: 10px 5px 5px 5px;
 
   h3 {
-    font-weight: 100;
-    font-size: 17px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 11px;
   }
 }
 
@@ -92,8 +109,42 @@ ion-slides {
   overflow: scroll;
 }
 
-.movie {
+.posiAbsolute{
+  position: absolute;
+  width: 30%;
+  padding: 5px;
+  background-image: linear-gradient(to right, var(--ion-color-netfly-red) -30%, rgba(255, 255, 255, 0) 100%);
+  height: 71%;
+  left: 0;
+
+  p{
+    font-weight: 100;
+    font-style: italic;
+    font-size: 12px;
+    margin-right: 15px;
+  }
+}
+
+.scroll-box ion-skeleton-text {
+  height: 150px;
+  max-width: none;
+}
+
+.movieCharge {
+  height: 100%;
+  min-width:100px;
   margin-left: 5px;
+
+}
+
+.movie .img-introCharge {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+}
+
+.movie {
+  margin-right: 5px;
 }
 
 .movie img {

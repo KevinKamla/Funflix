@@ -1,0 +1,45 @@
+ion-content {
+    .d-bloc{
+        display: block;
+    }
+    .d-none{
+        display: none;
+    }
+
+    .blocButton {
+
+        ion-buttons {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            ion-button {
+                width: 40%;
+                border-radius: 5px;
+                font-weight: 600;
+            }
+        }
+
+        .btn-add {
+            background-color: var(--ion-color-netfly-red-contrast);
+            color: #000;
+        }
+
+        .btn-play {
+            background-color: var(--ion-color-netfly-red);
+        }
+    }
+
+    .ytp-chrome-controls .ytp-button.ytp-youtube-button, 
+    .ytp-small-mode .ytp-chrome-controls .ytp-button.ytp-youtube-button, 
+    .ytp-embed .ytp-chrome-controls .ytp-button.ytp-youtube-button, 
+    .ytp-embed.ytp-small-mode .ytp-chrome-controls .ytp-button.ytp-youtube-button, 
+    .ytp-dni.ytp-embed .ytp-chrome-controls .ytp-button.ytp-youtube-button {
+        display:none;
+    }
+
+    .html5-video-player a{
+        font-size: 10px;
+    }
+}

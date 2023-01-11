@@ -1,15 +1,153 @@
 <ion-header>
-  <ion-toolbar color="netflix-dark">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>
-      <img class="logo-header" src="../../assets/img/funflix.png">
-    </ion-title>
-    <ion-searchbar></ion-searchbar>
-  </ion-toolbar>
+  <ion-searchbar placeholder="Entre le titre" (ionChange)="onSearchChange($event)"></ion-searchbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-card color="netfly-dark" *ngIf="videoFriend.length > 0; else otherBlocResult">
+    <ion-card-subtitle>Search result({{videoFriend.length}})</ion-card-subtitle>
+    <ion-item color="netfly-dark" *ngFor="let item of videoFriend" (click)="openModalDetail(item)">
+      <ion-thumbnail>
+        <img *ngIf=" item.Poster != 'N/A'; else otherPoster" src={{item.Poster}} alt="">
+        <ng-template #otherPoster><ion-skeleton-text animated></ion-skeleton-text> </ng-template>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{item.Title}}</h3>
+        <p *ngIf=" item.Plot != 'N/A'; else otherPlot">{{item.Plot}}</p>
+        <ng-template #otherPlot>
+          <p> <ion-skeleton-text animated></ion-skeleton-text></p>
+        </ng-template>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card color="netfly-dark" *ngIf="resultSearchYoutubeTab.length > 0">
+    <ion-card-subtitle>Youtube search result({{resultSearchYoutubeTab.length}})</ion-card-subtitle>
+    <ion-item color="netfly-dark" *ngFor="let item of resultSearchYoutubeTab" (click)="openModalDetail(item)">
+      <ion-thumbnail>
+        <img *ngIf=" item.Poster != 'N/A'; else otherPoster" src={{item.snippet.thumbnails.high.url}} alt="">
+        <ng-template #otherPoster><ion-skeleton-text animated></ion-skeleton-text> </ng-template>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{item.snippet.title}}</h3>
+        <p *ngIf=" item.Plot != 'N/A'; else otherPlot">{{item.snippet.description}}</p>
+        <ng-template #otherPlot>
+          <p> <ion-skeleton-text animated></ion-skeleton-text></p>
+        </ng-template>
+      </ion-label>
+    </ion-item>
+
+  </ion-card>
+
+  <ng-template #otherBlocResult>
+    <div class={{display_skeleton}}>
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item color="netfly-dark">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      
+    </div>
+  </ng-template>
 </ion-content>

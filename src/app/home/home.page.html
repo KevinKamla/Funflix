@@ -1,186 +1,91 @@
 <ion-content>
-  <div color="netfly-dark" class="menu_grid">
-      <h5>All</h5> <h5>TV show</h5> <h5>Movies</h5> <h5>My list</h5>
-  </div>
 
-  
   <ion-slides [options]="swipper" pager="md">
-    <ion-slide>
+    <ion-slide *ngFor="let item of tabVideoSlide">
       <ion-card>
-        <img class="img-intro" src="../../assets/img/spider-man.jpg" alt="img_swiper"  [routerLink]="['video-detail']">
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img class="img-intro" src="../../assets/img/shang-chi.jpg" alt="img_swiper">
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img class="img-intro" src="../../assets/img/ca-plus.png" alt="img_swiper">
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img class="img-intro" src="../../assets/img/captain-marvel.jpg" alt="img_swiper">
+        <img class="img-intro" src={{item.Poster}} (click)="openModalDetail(item)">
       </ion-card>
     </ion-slide>
   </ion-slides>
 
-  <!-- <ion-button color="netfly-red" expand="block">
-    <ion-icon name="play"></ion-icon>
-  </ion-button> -->
-  <ion-button (click)="checkConnection()" expand="block" fill="clear" shape="round">
-    checkConnection
-  </ion-button>
 
   <ion-card color="netfly-dark-tint">
-    <div class="box-title"> <h3>All</h3> <h3 >See all...</h3> </div>
-    <div class="scroll-box">
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/matrix.jpg" alt="" srcset="">
-      </div>
+    <div class="box-title">
 
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/cruella.png" alt="" srcset="">
-      </div>
+      <h3>All</h3>
+      <p [routerLink]="['all']">See all</p>
+    </div>
 
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ca3.jpg" alt="" srcset="">
+    <div class="container-scroll">
+      <div class="movie posiAbsolute">
+        <p>Les meilleur film du moment à regarder en haute définition et en strraming ici </p>
       </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ff9.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/doctor-stranges2.jpeg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/freedom.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/hitman.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ironman2.jpg" alt="" srcset="">
+      <div class="scroll-box" *ngIf="tabFilm.length > 0 ; else otherScrollBox">
+        <div class="movie" *ngFor="let item of tabFilm">
+          <img class="img-intro" src={{item.Poster}} (click)="openModalDetail(item)">
+        </div>
       </div>
     </div>
+    <ng-template #otherScrollBox>
+      <div class="scroll-box">
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+      </div>
+    </ng-template>
+
   </ion-card>
 
   <ion-card color="netfly-dark-tint">
-    <div class="box-title"> <h3>News</h3> <h3 >See all...</h3> </div>
+    <div class="box-title">
+      <h3>Action</h3>
+      <p>See all</p>
+    </div>
     <div class="scroll-box">
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/avenger.jpg" alt="" srcset="">
-      </div>
+      <ng-template *ngIf="tabVideoAction.length > 0 ; else otherFilmAction">
+        <div class="movie posiAbsolute">
+          <p>Les meilleur film du moment à regarder en haute définition et en strraming ici</p>
+        </div>
+        <div class="movie" *ngFor="let item of tabVideoAction">
+          <img class="img-intro" src={{item.Poster}} (click)="openModalDetail(item)">
+        </div>
+      </ng-template>
 
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/black-adam.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/annabelle.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/black-panther.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/black-window.jpeg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/blade.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ca.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/x-man.jpg" alt="" srcset="">
-      </div>
+      <ng-template #otherFilmAction>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+      </ng-template>
     </div>
   </ion-card>
-
-  <ion-card color="netfly-dark-tint">
-    <div class="box-title"> <h3>Popular</h3> <h3 >See all...</h3> </div>
-    <div class="scroll-box">
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/matrix.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/cruella.png" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ca3.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ff9.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/doctor-stranges2.jpeg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/freedom.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/hitman.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ironman2.jpg" alt="" srcset="">
-      </div>
-    </div>
-  </ion-card>
-
-  <ion-card color="netfly-dark-tint">
-    <h4 class="box-title">Tendency</h4>
-    <div class="scroll-box">
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/avenger.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/black-adam.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/annabelle.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/black-panther.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/black-window.jpeg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/blade.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/ca.jpg" alt="" srcset="">
-      </div>
-
-      <div class="movie">
-        <img class="img-intro" src="../../assets/img/x-man.jpg" alt="" srcset="">
-      </div>
-    </div>
-  </ion-card>
-
-
 </ion-content>

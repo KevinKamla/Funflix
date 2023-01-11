@@ -1,11 +1,140 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>videoDetail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-<div class="bg-img">
+  <div class="header_modal">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img class="logo-header" src="../../../assets/img/funflix.png">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="whislist()">
+        <ion-icon slot="end" name="heart-{{healt_icon}}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
 
-</div>
+  <div class="container-bloc">
+    <div class="bg-img" *ngIf="currentVideo.Poster != 'N/A'; else otherBackImg"
+      [ngStyle]="{ 'background-image': 'linear-gradient(rgb(0 0 0), rgb(17 17 17 / 0%), rgb(0 0 0)), url('+ currentVideo.Poster +')'}">
+      <div class="videoTitle">{{currentVideo.Title}}</div>
+    </div>
+    <ng-template #otherBackImg>
+      <div class="bg-img"
+        [ngStyle]="{ 'background-image': 'linear-gradient(rgb(0 0 0), rgb(17 17 17 / 0%), rgb(0 0 0)), url('+ imageBackDefault +')'}">
+        <div class="videoTitle">{{currentVideo.Title}}</div>
+      </div>
+    </ng-template>
+
+
+
+    <div class="bloc-info">
+      <div class="infoVideo">
+        <p class="green">{{currentVideo.Year}}</p>
+        <p class="separate_bar">{{currentVideo.Genre}}</p>
+        <p>{{currentVideo.Director}}</p>
+      </div>
+      <div class="blocButton">
+        <ion-buttons slot="start">
+          <ion-button class="btn-play" (click)="openModalPlay()">
+            <ion-icon slot="start" name="play"></ion-icon> Play
+          </ion-button>
+          <!-- id="infoVideo" -->
+          <ion-button class="btn-add" (click)="openModalinfoVideo()">
+            <ion-icon name="alert-circle"> </ion-icon> Info
+          </ion-button>
+        </ion-buttons>
+      </div>
+      <p>{{currentVideo.Plot}}</p>
+
+      <div class="moreVideo">
+        <h3>More videos</h3>
+        <ion-card color="netfly-dark" *ngIf="videoFriend.length > 0 ; else othervideoFriend">
+          <ion-item color="netfly-dark" *ngFor="let item of videoFriend" (click)="openModalDetail(item)">
+            <ion-thumbnail>
+              <img src={{item.Poster}} alt="">
+              <!-- <ng-template #otherPoster><ion-skeleton-text animated></ion-skeleton-text> </ng-template> -->
+            </ion-thumbnail>
+            <ion-label>
+              <h3>{{item.Title}}</h3>
+              <p >{{item.Plot}}</p>
+              <!-- <ng-template #otherPlot> <p> <ion-skeleton-text animated></ion-skeleton-text></p></ng-template> *ngIf=" item.Plot != 'N/A'; else otherPlot" -->
+            </ion-label>
+          </ion-item>
+        </ion-card>
+
+        <ng-template #othervideoFriend>
+
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+          <ion-item color="netfly-dark">
+            <ion-thumbnail slot="start">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+            <ion-label>
+              <h4><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h4>
+              <p><ion-skeleton-text animated style="width: 80%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+        </ng-template>
+
+
+      </div>
+    </div>
+
+  </div>
+
 </ion-content>

@@ -1,0 +1,36 @@
+<ion-header color="netfly-dark">
+  <ion-toolbar color="netfly-dark">
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="netfly-dark" [fullscreen]="true">
+  <div id="idVid" style="width: 100%;"></div>
+  <div *ngIf="slideVideo == false; else divVideoSlide">
+    <br>
+    <br>
+    <br>
+    <div class="blocButton {{displayButtons}}">
+      <ion-buttons slot="start">
+        <ion-button *ngIf="stopped == true; else moreButton" class="btn-add" (click)="playYoutube(linkVideo)">
+          <ion-icon slot="start" name="play"></ion-icon> Play
+        </ion-button>
+        <ng-template #moreButton>
+          <ion-button class="btn-play" (click)="stopYoutube()">
+            <ion-icon slot="start" name="stop"></ion-icon> Stop
+          </ion-button>
+        </ng-template>
+      </ion-buttons>
+    </div>
+  </div>
+  <ng-template #divVideoSlide >
+    <div id="container">
+      <ion-title>Streaming</ion-title>
+    </div>
+  </ng-template>
+</ion-content>

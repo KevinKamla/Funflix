@@ -1,0 +1,158 @@
+[
+    {
+        "id": "5",
+        "nom": "black panther"
+    },
+    {
+        "id": "6",
+        "nom": "cruella"
+    },
+    {
+        "id": "7",
+        "nom": "infinite"
+    },
+    {
+        "id": "8",
+        "nom": "x-men origins"
+    },
+    {
+        "id": "9",
+        "nom": "black adam"
+    },
+    {
+        "id": "10",
+        "nom": "hitman"
+    },
+    {
+        "id": "11",
+        "nom": "Avengers Forever"
+    },
+    {
+        "id": "1",
+        "Title": "spider man ",
+        "Init":"init",
+        "play": "",
+        "Year":"2022",
+        "Genre":"Action",
+        "Director":"Scama",
+        "Plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+        "Poster": "assets/img/spider-man.png"
+    },
+    {
+        "id": "12",
+        "nom": "batman"
+    },
+    {
+        "id": "13",
+        "nom": "super man"
+    },
+    {
+        "id": "14",
+        "nom": "fast"
+    },
+    {
+        "id": "15",
+        "nom": "doctor-strange"
+    },
+    {
+        "id": "16",
+        "nom": "freedom"
+    },
+    {
+        "id": "17",
+        "nom": "end"
+    },
+    {
+        "id": "18",
+        "nom": "avengers-endgame"
+    },
+    {
+        "id": "19",
+        "nom": "annabelle"
+    },
+    {
+        "id": "2",
+        "Title": "shang chi",
+        "Init":"init",
+        "play": "",
+        "Year":"2021",
+        "Genre":"Action, Aventure",
+        "Director":"Marvel studio",
+        "Plot": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
+        "Poster": "assets/img/shang-chi.jpg"
+    },
+    {
+        "id": "20",
+        "nom": "black-widow"
+    },
+    {
+        "id": "21",
+        "nom": "infinite"
+    },
+    {
+        "id": "22",
+        "nom": "wakanda"
+    },
+    {
+        "id": "23",
+        "nom": "avatar"
+    },
+    {
+        "id": "24",
+        "nom": "mascarade"
+    },
+    {
+        "id": "25",
+        "nom": "dora"
+    },
+    {
+        "id": "3",
+        "Title": "ca ",
+        "Init":"init",
+        "play": "",
+        "Year":"2018",
+        "Genre":"Horror",
+        "Director":"Patrik rich",
+        "Plot": "Ca  00000000000000000000000000000000000000000000000000",
+        "Poster": "assets/img/ca-plus.png"
+    },
+    {
+        "id": "26",
+        "nom": "scream"
+    },
+    {
+        "id": "27",
+        "nom": "the marine"
+    },
+    {
+        "id": "28",
+        "nom": "White House Down"
+    },
+    {
+        "id": "29",
+        "nom": "San Andreas"
+    },
+    {
+        "id": "4",
+        "Title": "marvel",
+        "Init":"init",
+        "play": "",
+        "Year":"2020",
+        "Genre":"Action",
+        "Director":"Ferdinand",
+        "Plot": "This series showcases individual characters from the MCU, whom viewers have come to know and love over the years and revisit some of their most iconic moments.",
+        "Poster": "assets/img/marvel.jpg"
+    },
+    {
+        "id": "30",
+        "nom": "extraction"
+    },
+    {
+        "id": "31",
+        "nom": "lazarus"
+    },
+    {
+        "id": "32",
+        "nom": "Tomb of the River"
+    }
+]

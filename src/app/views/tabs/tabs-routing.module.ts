@@ -13,6 +13,11 @@ const routes: Routes = [
         loadChildren: () => import('../../home/home.module').then(m => m.HomePageModule)
       },
       {
+        path: '',
+        redirectTo: '/tabs/home',
+        pathMatch: 'full'
+      },
+      {
         path: 'home',
         loadChildren: () => import('../../home/home.module').then(m => m.HomePageModule)
       },
@@ -25,10 +30,22 @@ const routes: Routes = [
         loadChildren: () => import('../../views/download/download.module').then( m => m.DownloadPageModule)
       },
       {
-        path: '',
-        redirectTo: '/tabs/home',
-        pathMatch: 'full'
+        path: 'all',
+        loadChildren: () => import('../../views/all/all.module').then( m => m.AllPageModule)
       },
+      {
+        path: 'tv',
+        loadChildren: () => import('../../views/tv/tv.module').then( m => m.TvPageModule)
+      },
+      {
+        path: 'movies',
+        loadChildren: () => import('../../views/movies/movies.module').then( m => m.MoviesPageModule)
+      },
+      {
+        path: 'mylist',
+        loadChildren: () => import('../../views/mylist/mylist.module').then( m => m.MylistPageModule)
+      },
+     
     ]
   }
 ];

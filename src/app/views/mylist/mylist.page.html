@@ -1,0 +1,97 @@
+<ion-content>
+  <h3>My list</h3>
+
+  
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card color="netfly-dark" *ngIf="tabVidFavorite.length > 0; else otherBlockList">
+    <ion-item color="netfly-dark" *ngFor="let item of tabVidFavorite" (click)="openModalDetail(item)">
+      <ion-thumbnail>
+        <img *ngIf=" item.Poster != 'N/A'; else otherPoster" src={{item.Poster}} alt="">
+        <ng-template #otherPoster><ion-skeleton-text animated></ion-skeleton-text> </ng-template>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{item.Title}}</h3>
+        <p *ngIf=" item.Plot != 'N/A'; else otherPlot">{{item.Plot}}</p>
+        <ng-template #otherPlot>
+          <p> <ion-skeleton-text animated></ion-skeleton-text></p>
+        </ng-template>
+      </ion-label>
+    </ion-item>
+     <!-- <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+          <ion-infinite-scroll-content></ion-infinite-scroll-content>
+     </ion-infinite-scroll> -->
+  </ion-card>
+  <ng-template #otherBlockList>
+    <ion-item color="netfly-dark">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item color="netfly-dark">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item color="netfly-dark">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item color="netfly-dark">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item color="netfly-dark">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ng-template>
+
+
+</ion-content>
