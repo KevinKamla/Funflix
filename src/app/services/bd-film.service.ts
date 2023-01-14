@@ -2,15 +2,32 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage'
 import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 import { HttpClient } from '@angular/common/http'
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
+export interface User {
+  name: string;
+  email: string;
+  password:string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class BdFilmService {
 
-  constructor(private storage: Storage) { }
+  Email: any;
+  password: any;
+  constructor(
+    //private firestore: Firestore
+    private angularfireAuth: AngularFireAuth,
+    private storage: Storage
+    ) { }
 
+
+
+  getRegister( email: any, password: any): any{
+    return this.angularfireAuth.createUserWithEmailAndPassword(email, password);
+  }
 
   async initDataBase() {
     await this.storage.create();
@@ -67,5 +84,30 @@ export class BdFilmService {
   async clear() {
     this.storage.clear();
   }
+
+    // getUser(): Observable< User[]>{
+  //   const userRef = collection(this.firestore, 'user');
+  //   return collectionData(userRef, {idField: 'id'}) as Observable<User[]>;
+  // }
+
+  // getUserById(id: any): Observable <User>{
+  //   const userDocRef = doc(this.firestore, 'user\${id}');
+  //   return docData(userDocRef, {idField: 'id'}) as Observable<User>;
+  // }
+
+  // addUser(user: User){
+  //   const userRef = collection(this.firestore, 'users');
+  //   return addDoc(userRef, user);
+  // }
+
+  // deleteUser(user: User){
+  //   const userDocRef = doc(this.firestore, 'user\${id}');
+  //   return deleteDoc(userDocRef)
+  // }
+
+  // updateUser(user: User){
+  //   const userDocRef = doc(this.firestore, 'Users/${user.id}');
+  //   return updateDoc(userDocRef, { email: user.email, name: user.name, password: user.password});
+  // }
 
 }

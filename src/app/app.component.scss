@@ -1,7 +1,12 @@
+.d-n{
+  display: none;
+}
+
 .logo-header {
   height: 30px;
   margin-top: 5px;
 }
+
 
 .menu_grid {
   position: fixed;
@@ -22,8 +27,12 @@
 }
 
 ion-menu {
-  margin-top: 80px !important;
+  // margin-top: 80px !important;
 
+  input{
+    display: none;
+  }
+  
   .account {
     margin: 14px;
     display: grid;

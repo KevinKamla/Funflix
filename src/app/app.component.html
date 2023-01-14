@@ -1,38 +1,21 @@
 <ion-app>
 
-    <ion-header [translucent]="true" color="netfly-dark">
-        <ion-toolbar color="netfly-dark">
-            <ion-buttons slot="start">
-                <ion-back-button></ion-back-button>
-            </ion-buttons>
-            <ion-title class="ion-text-center">
-                <img class="logo-header" src="../../assets/img/funflix.png">
-            </ion-title>
-            <ion-buttons slot="end">
-                <ion-button>
-                    <ion-icon name="tv"></ion-icon>
-                </ion-button>
-            </ion-buttons>
-        </ion-toolbar>
-    </ion-header>
-
-
     <ion-split-pane contentId="menu_cinema">
         <ion-menu contentId="menu_cinema" menuId="pearl_sale" class="bg_side" type="overlay">
             <ion-content color="netfly-dark">
                 <ion-menu-toggle autoHide="false">
                     <div class="account">
-                        <ion-avatar>
-                            <img [src]="['assets/img/funflix.png']" />
-                        </ion-avatar>
+                        <form action="">
+                            <label for="imgUser">
+                                <ion-avatar>
+                                    <img [src]="['assets/img/funflix.png']" />
+                                </ion-avatar>
+                            </label>
+                            <input type="file" name="imgUser" id="imgUser">
+                        </form>
+
                         <ion-label>Name</ion-label>
                     </div>
-                </ion-menu-toggle>
-
-                <ion-menu-toggle autoHide="false">
-                    <ion-item [routerLink]="['categorie']" color="netfly-dark">
-                        <ion-label> Category </ion-label>
-                    </ion-item>
                 </ion-menu-toggle>
 
                 <ion-menu-toggle autoHide="false">

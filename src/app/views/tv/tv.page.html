@@ -1,7 +1,23 @@
-<ion-content>
-    <h3>Action</h3>
+<ion-header [translucent]="true" color="netfly-dark">
+  <ion-toolbar color="netfly-dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img class="logo-header" src="../../assets/img/funflix.png">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="tv"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-      
+<ion-content>
+  <h3>Action</h3>
+
+
   <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
@@ -20,7 +36,7 @@
         </ng-template>
       </ion-label>
     </ion-item>
-     <!-- <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <!-- <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
           <ion-infinite-scroll-content></ion-infinite-scroll-content>
      </ion-infinite-scroll> -->
   </ion-card>

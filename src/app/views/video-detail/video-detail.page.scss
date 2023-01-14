@@ -72,6 +72,7 @@ ion-content {
 
             .btn-play {
                 background-color: var(--ion-color-netfly-red);
+                color: #fff;
             }
         }
 
@@ -88,12 +89,14 @@ ion-content {
         .moreVideo {
             h3 {
                 margin-inline: 10px;
+                color: #fff;
             }
             ion-item{
                 margin-bottom: 5px;
             }
 
             ion-label {
+                color: #fff;
                 margin-left: 15px;
             }
         }
@@ -142,6 +145,7 @@ ion-content {
     ion-icon {
         height: 27px;
         width: 23px;
+        color: white;
     }
 
 }

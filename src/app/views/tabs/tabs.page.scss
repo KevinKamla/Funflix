@@ -5,10 +5,18 @@
 //     border: none;
 // }
 
+.logo-header {
+    height: 30px;
+    margin-top: 5px;
+}
+
+.header {
+    position: relative;
+}
 
 .first-tabs {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     width: 100%;
     background: linear-gradient(to top, #000000 40%, rgba(255, 255, 255, 0) 145%);
     align-self: center;
@@ -27,5 +35,4 @@
 
 .second-tabs {
     position: relative;
-    margin-top: 40px;
 }

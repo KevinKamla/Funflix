@@ -25,16 +25,16 @@ export class PlayPage implements OnInit {
     private streamingMedia: StreamingMedia,
   ) { }
 
-  playStreaming() {
-    let options: StreamingVideoOptions = {
-      successCallback: () => { console.log('Video played') },
-      errorCallback: (e) => { console.log('Error streaming') },
-      orientation: 'portrait',
-      shouldAutoClose: true,
-      controls: true
-    };
-    this.streamingMedia.playVideo('http://static.videogular.com/assets/videos/elephants-dream.mp4', options);
-  }
+  // playStreaming() {
+  //   let options: StreamingVideoOptions = {
+  //     successCallback: () => { console.log('Video played') },
+  //     errorCallback: (e) => { console.log('Error streaming') },
+  //     orientation: 'portrait',
+  //     shouldAutoClose: true,
+  //     controls: true
+  //   };
+  //   this.streamingMedia.playVideo('http://static.videogular.com/assets/videos/elephants-dream.mp4', options);
+  // }
 
 
 
@@ -68,12 +68,11 @@ export class PlayPage implements OnInit {
     this.currentVideo = JSON.parse(localStorage.getItem('video'))
     if (this.currentVideo.Init == "init") {
       console.log("currentVideo.Init == init");
-      this.slideVideo = true
-      this.playStreaming();
-      this.closeModal();
+      // this.slideVideo = true
+      // this.playStreaming();
+      this.playYoutube(this.currentVideo.play)
     } else {
       console.log("currentVideo.Init !!== Init ");
-      this.slideVideo = false
       this.playYoutube(this.linkVideo)
     }
     const setI = setInterval(() => {

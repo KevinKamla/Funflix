@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'all',
     loadChildren: () => import('../views/all/all.module').then( m => m.AllPageModule)
   },
+  {
+    path: 'tv',
+    loadChildren: () => import('../views/tv/tv.module').then( m => m.TvPageModule)
+  },
+  {
+    path: 'movies',
+    loadChildren: () => import('../views/movies/movies.module').then( m => m.MoviesPageModule)
+  },
 ];
 
 @NgModule({

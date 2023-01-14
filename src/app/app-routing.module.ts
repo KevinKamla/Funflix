@@ -3,8 +3,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'tabs',
     loadChildren: () => import('./views/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./views/auth/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'home',
@@ -19,10 +23,6 @@ const routes: Routes = [
     loadChildren: () => import('./views/account/account.module').then( m => m.AccountPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./views/auth/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'register',
     loadChildren: () => import('./views/auth/register/register.module').then( m => m.RegisterPageModule)
   },
@@ -33,6 +33,18 @@ const routes: Routes = [
   {
     path: 'all-info-video',
     loadChildren: () => import('./views/all-info-video/all-info-video.module').then( m => m.AllInfoVideoPageModule)
+  },
+  {
+    path: 'reset',
+    loadChildren: () => import('./views/auth/reset/reset.module').then( m => m.ResetPageModule)
+  },
+  {
+    path: 'index1',
+    loadChildren: () => import('./views/index1/index1.module').then( m => m.Index1PageModule)
+  },
+  {
+    path: 'index2',
+    loadChildren: () => import('./views/index2/index2.module').then( m => m.Index2PageModule)
   },
 ];
 

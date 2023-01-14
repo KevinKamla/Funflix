@@ -1,3 +1,4 @@
+
 <ion-content>
 
   <ion-slides [options]="swipper" pager="md">
@@ -54,7 +55,7 @@
   <ion-card color="netfly-dark-tint">
     <div class="box-title">
       <h3>Action</h3>
-      <p>See all</p>
+      <p [routerLink]="['tv']">See all</p>
     </div>
     <div class="scroll-box">
       <ng-template *ngIf="tabVideoAction.length > 0 ; else otherFilmAction">
@@ -88,4 +89,42 @@
       </ng-template>
     </div>
   </ion-card>
+  <ion-card color="netfly-dark-tint">
+    <div class="box-title">
+      <h3>Horror</h3>
+      <p [routerLink]="['movies']">See all</p>
+    </div>
+    <div class="scroll-box">
+      <ng-template *ngIf="tabVideoAction.length > 0 ; else otherFilmAction">
+        <div class="movie posiAbsolute">
+          <p>Les meilleur film du moment à regarder en haute définition et en strraming ici</p>
+        </div>
+        <div class="movie" *ngFor="let item of tabVideoAction">
+          <img class="img-intro" src={{item.Poster}} (click)="openModalDetail(item)">
+        </div>
+      </ng-template>
+
+      <ng-template #otherFilmAction>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+        <div class="movieCharge">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </div>
+      </ng-template>
+    </div>
+  </ion-card>
+
 </ion-content>

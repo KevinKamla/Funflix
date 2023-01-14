@@ -1,3 +1,20 @@
+
+    <ion-header [translucent]="true" color="netfly-dark" >
+      <ion-toolbar color="netfly-dark">
+          <ion-buttons slot="start">
+              <ion-back-button></ion-back-button>
+          </ion-buttons>
+          <ion-title class="ion-text-center">
+              <img class="logo-header" src="../../assets/img/funflix.png">
+          </ion-title>
+          <ion-buttons slot="end">
+              <ion-button>
+                  <ion-icon name="tv"></ion-icon>
+              </ion-button>
+          </ion-buttons>
+      </ion-toolbar>
+  </ion-header>
+
 <ion-header>
   <ion-searchbar placeholder="Entre le titre" (ionChange)="onSearchChange($event)"></ion-searchbar>
 </ion-header>

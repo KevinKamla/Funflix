@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
 
-</ion-content>
+  <ion-content [fullscreen]="true" class="background">
+    <div class="flex-center">
+      <ion-card class="card">
+        <ion-card-header>
+         <img src="assets/img/F3.png" alt="">
+        </ion-card-header>
+        <ion-card-content>
+          <form class="item">
+            <!-- <ion-item>
+              <ion-input type="text" placeholder="Name" ></ion-input>
+            </ion-item> -->
+              <ion-item>
+                <ion-input type="email" id="email" placeholder="Email"></ion-input>
+              </ion-item>
+            <ion-item>
+              <ion-input type="password" id="password" placeholder="Password" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="password" placeholder="Confirm password"></ion-input>
+            </ion-item>
+          </form>
+          <ion-button  class="but" (click)="reg()" > Singup </ion-button>
+        </ion-card-content>
+        <ion-item class="none">
+          <ion-checkbox slot="start" color="danger"></ion-checkbox>
+          <ion-label>Remember my login</ion-label>
+        </ion-item >
+  
+        <div (click)="gotosingIn()">
+          <p>Already on Funflix?<a >Sing In</a></p>
+        </div>
+        
+      </ion-card>
+    </div>
+  </ion-content>
+  

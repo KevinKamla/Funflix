@@ -31,7 +31,7 @@
         "id": "1",
         "Title": "spider man ",
         "Init":"init",
-        "play": "",
+        "play": "h6GdOpjD3Oc",
         "Year":"2022",
         "Genre":"Action",
         "Director":"Scama",
@@ -74,7 +74,7 @@
         "id": "2",
         "Title": "shang chi",
         "Init":"init",
-        "play": "",
+        "play": "8YjFbMbfXaQ",
         "Year":"2021",
         "Genre":"Action, Aventure",
         "Director":"Marvel studio",
@@ -109,11 +109,11 @@
         "id": "3",
         "Title": "ca ",
         "Init":"init",
-        "play": "",
+        "play": "Tw3yT-qAbvc",
         "Year":"2018",
         "Genre":"Horror",
         "Director":"Patrik rich",
-        "Plot": "Ca  00000000000000000000000000000000000000000000000000",
+        "Plot": "This series showcases individual characters from the MCU, whom viewers have come to know and love over the years and revisit some of their most iconic moments.",
         "Poster": "assets/img/ca-plus.png"
     },
     {
@@ -136,7 +136,7 @@
         "id": "4",
         "Title": "marvel",
         "Init":"init",
-        "play": "",
+        "play": "5WfTEZJnv_8",
         "Year":"2020",
         "Genre":"Action",
         "Director":"Ferdinand",
@@ -154,5 +154,9 @@
     {
         "id": "32",
         "nom": "Tomb of the River"
+    },
+    {
+        "id":"33",
+        "nom":"Transporter"
     }
 ]

@@ -47,7 +47,7 @@ export class HomePage implements OnInit {
   }
 
   swipper = {
-    slidesPerView: 1.3,
+    slidesPerView: 1.4,
     centeredSlides: true,
     loop: true,
     spaceBetween: -20,
@@ -56,12 +56,6 @@ export class HomePage implements OnInit {
   }
 
 
-  // setI = setInterval(() => {
-  //   if (this.init <= 1000) {
-  //     console.log("tab tabVideoSlide : ", this.tabVideoSlide);
-  //     this.init +=1 
-  //   } else clearInterval(this.setI)
-  // }, 1)
 
 
 
@@ -76,22 +70,31 @@ export class HomePage implements OnInit {
         this.tabTitre.forEach((item: any) => {
           this.service.getFilm(item.nom, "").subscribe((res: any) => {
             this.tabFilmAll.push(res)
-            this.serviceBD.setData("liste-fims", res)
+            this.serviceBD.setData("liste-films", res)
+            console.log("tab filmAll : ", this.tabFilmAll);
           });
         });
-        for (let i = 0; i < 10; i++) {
-          this.tabFilm.push(this.tabFilmAll[i])
-        }
-        this.tabFilmAll.forEach(element => {
-          let genre = element.Genre.split(',')
-          if (genre[0] == "Action") {
-            this.tabVideoActionAll.push(element)
+        const setI = setInterval(() => {
+          if (this.tabFilmAll.length > 10) {
+            for (let i = 0; i < 10; i++) {
+              this.tabFilm.push(this.tabFilmAll[i])
+              // console.log("tab film : ", this.tabFilm);
+              this.tabFilmAll.forEach(element => {
+                let genre = element.Genre.split(',')
+                if (genre[0] == "Action") {
+                  this.tabVideoActionAll.push(element)
+                  console.log("tab tabVideoActionAll : ", this.tabVideoActionAll);
+                }
+              });
+            }
+            for (let i = 0; i < 10; i++) {
+              this.tabVideoAction.push(this.tabVideoActionAll[i])
+            }
+            console.log("tab film Action: ", this.tabVideoAction);
+            clearInterval(setI)
           }
-        });
-        for (let i = 0; i < 10; i++) {
-          this.tabVideoAction.push(this.tabVideoActionAll[i])
-        }
-        console.log("tab film Action: ", this.tabVideoAction);
+        }, 1000)
+
       })
     })
 

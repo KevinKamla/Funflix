@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
 
-</ion-content>
+
+  <ion-content [fullscreen]="true" class="background">
+    <div class="flex-center">
+      <ion-card class="card">
+        <ion-card-header>
+         <img src="assets/img/F3.png" alt="">
+        </ion-card-header>
+        <ion-card-content>
+          <form class="item">
+              <ion-item>
+                <ion-input type="email" id="email" placeholder="Email"></ion-input>
+              </ion-item>
+            <ion-item>
+              <ion-input type="password" id="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <div>
+              <p>forgot password? <span routerLink="'reset" (click)="move()">click here</span> </p>
+            </div>
+          </form>
+          <ion-button  class="but" (click)="log()"> Sing In </ion-button>
+        </ion-card-content>
+        <!-- <ion-item class="none">
+          <ion-checkbox slot="start" color="danger"></ion-checkbox>
+          <ion-label>Remember my login</ion-label>
+        </ion-item> -->
+  
+        <div>
+          <p (click)="gotoRegister()">Create an account now </p>
+        </div>
+        
+      </ion-card>
+    </div>
+  </ion-content>
+  

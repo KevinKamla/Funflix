@@ -1,0 +1,52 @@
+*{
+    --background:rgb(6, 6, 6);
+}
+
+.flex-center{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-style:unset;
+    margin-top: 175px;
+    color: white;
+
+    
+}
+
+ion-card{
+    width: 260px;
+}
+
+ion-card-header img{
+    height: 150px;
+  }
+
+.flex{
+   display: flex;
+   justify-content: space-around; 
+   margin-top: 61px;
+   color: white;
+}
+
+p{
+    color: white; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ion-button{
+    width: 210px;
+    //margin-top: 72px
+    margin-top: 72px;
+    --background: rgb(255, 1, 1);
+    color: white;
+}
+
+ion-card h2 {
+    font-size: 19px;
+    color: white;
+}

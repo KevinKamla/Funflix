@@ -1,4 +1,21 @@
 <ion-tabs>
+
+  <ion-header [translucent]="true" color="netfly-dark" class="header">
+    <ion-toolbar color="netfly-dark">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">
+        <img class="logo-header" src="../../assets/img/funflix.png">
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="tv"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-tab-bar slot="bottom" color="netfly-dark" class="first-tabs">
     <ion-tab-button tab="home">
       <ion-icon name="home"></ion-icon>Home

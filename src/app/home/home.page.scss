@@ -26,6 +26,11 @@
   text-decoration: none;
 }
 
+.logo-header {
+  height: 30px;
+  margin-top: 5px;
+}
+
 ion-content {
   --ion-background-color: var(--ion-color-netfly-dark);
   ion-card .container-scroll{
@@ -122,6 +127,7 @@ ion-slides {
     font-style: italic;
     font-size: 12px;
     margin-right: 15px;
+    color: white;
   }
 }
 
