@@ -9,7 +9,7 @@
     text-align: center;
     font-style:unset;
     margin-top: 175px;
-    color: white;
+    color: var(--ion-color-netfly-dark-contrast);
 
     
 }
@@ -26,16 +26,16 @@ ion-card-header img{
    display: flex;
    justify-content: space-around; 
    margin-top: 61px;
-   color: white;
+   color: var(--ion-color-netfly-dark-contrast);
 }
 
 p{
-    color: white; 
+    color: var(--ion-color-netfly-dark-contrast); 
 }
 
 a{
     text-decoration: none;
-    color: white;
+    color: var(--ion-color-netfly-dark-contrast);
 }
 
 ion-button{
@@ -43,10 +43,10 @@ ion-button{
     //margin-top: 72px
     margin-top: 72px;
     --background: rgb(255, 1, 1);
-    color: white;
+    color: var(--ion-color-netfly-dark-contrast);
 }
 
 ion-card h2 {
     font-size: 19px;
-    color: white;
+    color: var(--ion-color-netfly-dark-contrast);
 }

@@ -6,20 +6,20 @@
                 <ion-menu-toggle autoHide="false">
                     <div class="account">
                         <form action="">
-                            <label for="imgUser">
-                                <ion-avatar>
+                            <label for="imgUser" >
+                                <ion-avatar  [routerLink]="['profile']" >
                                     <img [src]="['assets/img/funflix.png']" />
                                 </ion-avatar>
                             </label>
                             <input type="file" name="imgUser" id="imgUser">
                         </form>
 
-                        <ion-label>Name</ion-label>
+                        <ion-label>Name user</ion-label>
                     </div>
                 </ion-menu-toggle>
 
                 <ion-menu-toggle autoHide="false">
-                    <ion-item [routerLink]="['home']" color="netfly-dark">
+                    <ion-item [routerLink]="['profile']" color="netfly-dark">
                         <ion-label> Account </ion-label>
                     </ion-item>
                 </ion-menu-toggle>

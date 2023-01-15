@@ -21,7 +21,7 @@
   a {
     font-weight: 100;
     font-size: 14px;
-    color: white;
+    color: var(--ion-color-netfly-dark-contrast);
     text-decoration: none;
   }
 }
@@ -48,7 +48,7 @@ ion-menu {
     }
 
     ion-label {
-      color: white;
+      color: var(--ion-color-netfly-dark-contrast);
     }
   }
 

@@ -1,0 +1,31 @@
+
+<ion-content>
+  
+  <div class="header_modal">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['../tabs']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+  <div class="account">
+        <label for="imgUser" [routerLink]="['profile']"  >
+            <ion-avatar>
+                <img [src]="['assets/img/funflix.png']" />
+            </ion-avatar>
+        </label>
+        <input type="file" name="imgUser" id="imgUser" >
+
+    <ion-label>Name</ion-label>
+    <h3>User name</h3>
+    <ion-label>Prenom</ion-label>
+    <h3>Andrey</h3>
+    <ion-label>Âge</ion-label>
+    <h3>25 ans</h3>
+    <ion-label>Sexe</ion-label>
+    <h3>Masculin</h3>
+    <ion-label>Email</ion-label>
+    <h3>kvnkamla4@gamil.com</h3>
+</div>
+
+</ion-content>

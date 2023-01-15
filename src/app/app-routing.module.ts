@@ -19,10 +19,6 @@ const routes: Routes = [
     loadChildren: () => import('./views/video-detail/video-detail.module').then( m => m.VideoDetailPageModule)
   },
   {
-    path: 'account',
-    loadChildren: () => import('./views/account/account.module').then( m => m.AccountPageModule)
-  },
-  {
     path: 'register',
     loadChildren: () => import('./views/auth/register/register.module').then( m => m.RegisterPageModule)
   },
@@ -45,6 +41,10 @@ const routes: Routes = [
   {
     path: 'index2',
     loadChildren: () => import('./views/index2/index2.module').then( m => m.Index2PageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./views/profile/profile.module').then( m => m.ProfilePageModule)
   },
 ];
 

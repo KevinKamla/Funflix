@@ -47,7 +47,7 @@ export class VideoDetailPage implements OnInit {
     this.modale.dismiss();
   }
 
-  async openModalinfoVideo(){
+  async openModalinfoVideo() {
     const modale = await this.modale.create({
       component: AllInfoVideoPage
     });
@@ -100,6 +100,11 @@ export class VideoDetailPage implements OnInit {
     this.sevice.getLinkVideo(this.currentVideo.Title)
     this.videoId = localStorage.getItem("linkVideo")
     console.log("videoId : ", this.videoId);
+    // this.sevice.getFilmSecondApikey(this.currentVideo.Title, "").subscribe((res: any) => {
+    //   if (res.Response === "True" && res.Plot != 'N/A' && res.Poster != 'N/A') { this.videoFriend = res }
+    //   console.log(" Video frere  : ", this.videoFriend);
+    // })
+
     this.annees.forEach((item) => {
       this.initializeIconHeart()
       this.sevice.getFilmSecondApikey(this.currentVideo.Title, item).subscribe((res: any) => {

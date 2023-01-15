@@ -95,7 +95,7 @@ ion-slides {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: var(--ion-color-netfly-dark-contrast);
   margin: 10px 5px 5px 5px;
 
   h3 {
@@ -126,7 +126,7 @@ ion-slides {
     font-weight: 100;
     font-style: italic;
     font-size: 12px;
-    margin-right: 15px;
+    margin-right: -6px;
     color: white;
   }
 }
