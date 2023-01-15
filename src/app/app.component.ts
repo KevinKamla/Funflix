@@ -64,6 +64,7 @@ export class AppComponent implements OnInit {
     });
     await alerte.present();
   }
+
   gotosingIn() {
     this.navCtrl.navigateForward('tabs');
   }

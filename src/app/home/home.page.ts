@@ -24,6 +24,8 @@ export class HomePage implements OnInit {
   tabVideoAction: any[] = []
   tabVideoActionAll: any[] = [];
   i: any = 1;
+  tabVideoHorrorAll: any[] = [];
+  tabVideoHorror: any[] = [];
   // networkListener: PluginListenerHandle
 
   constructor(
@@ -86,9 +88,20 @@ export class HomePage implements OnInit {
                   console.log("tab tabVideoActionAll : ", this.tabVideoActionAll);
                 }
               });
+
+              this.tabFilmAll.forEach(element => {
+                let genre = element.Genre.split(',')
+                if (genre[0] == "Horror") {
+                  this.tabVideoActionAll.push(element)
+                  console.log("tab tabVideoActionAll : ", this.tabVideoHorrorAll);
+                }
+              });
             }
             for (let i = 0; i < 10; i++) {
               this.tabVideoAction.push(this.tabVideoActionAll[i])
+            }
+            for (let i = 0; i < 10; i++) {
+              this.tabVideoHorror.push(this.tabVideoHorrorAll[i])
             }
             console.log("tab film Action: ", this.tabVideoAction);
             clearInterval(setI)

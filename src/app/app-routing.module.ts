@@ -42,10 +42,10 @@ const routes: Routes = [
     path: 'index2',
     loadChildren: () => import('./views/index2/index2.module').then( m => m.Index2PageModule)
   },
-  {
-    path: 'profile',
-    loadChildren: () => import('./views/profile/profile.module').then( m => m.ProfilePageModule)
-  },
+  // {
+  //   path: 'profile',
+  //   loadChildren: () => import('./views/profile/profile.module').then( m => m.ProfilePageModule)
+  // },
 ];
 
 @NgModule({

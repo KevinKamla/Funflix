@@ -1,0 +1,430 @@
+[
+    {
+        "id": "5",
+        "nom": "black panther"
+    },
+    {
+        "id": "6",
+        "nom": "cruella"
+    },
+    {
+        "id": "7",
+        "nom": "infinite"
+    },
+    {
+        "id": "8",
+        "nom": "x-men origins"
+    },
+    {
+        "id": "9",
+        "nom": "black adam"
+    },
+    {
+        "id": "10",
+        "nom": "hitman"
+    },
+    {
+        "id": "11",
+        "nom": "Avengers Forever"
+    },
+    {
+        "id": "1",
+        "Title": "spider man ",
+        "Init":"init",
+        "play": "h6GdOpjD3Oc",
+        "Year":"2022",
+        "Genre":"Action",
+        "Director":"Scama",
+        "Plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+        "Poster": "assets/img/spider-man.png"
+    },
+    {
+        "id": "12",
+        "nom": "batman"
+    },
+    {
+        "id": "13",
+        "nom": "super man"
+    },
+    {
+        "id": "14",
+        "nom": "fast"
+    },
+    {
+        "id": "15",
+        "nom": "doctor-strange"
+    },
+    {
+        "id": "16",
+        "nom": "freedom"
+    },
+    {
+        "id": "17",
+        "nom": "end"
+    },
+    {
+        "id": "18",
+        "nom": "avengers-endgame"
+    },
+    {
+        "id": "19",
+        "nom": "annabelle"
+    },
+    {
+        "id": "2",
+        "Title": "shang chi",
+        "Init":"init",
+        "play": "8YjFbMbfXaQ",
+        "Year":"2021",
+        "Genre":"Action, Aventure",
+        "Director":"Marvel studio",
+        "Plot": "Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
+        "Poster": "assets/img/shang-chi.jpg"
+    },
+    {
+        "id": "20",
+        "nom": "black-widow"
+    },
+    {
+        "id": "21",
+        "nom": "infinite"
+    },
+    {
+        "id": "22",
+        "nom": "wakanda"
+    },
+    {
+        "id": "23",
+        "nom": "avatar"
+    },
+    {
+        "id": "24",
+        "nom": "mascarade"
+    },
+    {
+        "id": "25",
+        "nom": "dora"
+    },
+    {
+        "id": "3",
+        "Title": "ca ",
+        "Init":"init",
+        "play": "Tw3yT-qAbvc",
+        "Year":"2018",
+        "Genre":"Horror",
+        "Director":"Patrik rich",
+        "Plot": "This series showcases individual characters from the MCU, whom viewers have come to know and love over the years and revisit some of their most iconic moments.",
+        "Poster": "assets/img/ca-plus.png"
+    },
+    {
+        "id": "26",
+        "nom": "scream"
+    },
+    {
+        "id": "27",
+        "nom": "the marine"
+    },
+    {
+        "id": "28",
+        "nom": "White House Down"
+    },
+    {
+        "id": "29",
+        "nom": "San Andreas"
+    },
+    {
+        "id": "4",
+        "Title": "marvel",
+        "Init":"init",
+        "play": "5WfTEZJnv_8",
+        "Year":"2020",
+        "Genre":"Action",
+        "Director":"Ferdinand",
+        "Plot": "This series showcases individual characters from the MCU, whom viewers have come to know and love over the years and revisit some of their most iconic moments.",
+        "Poster": "assets/img/marvel.jpg"
+    },
+    {
+        "id": "30",
+        "nom": "extraction"
+    },
+    {
+        "id": "31",
+        "nom": "lazarus"
+    },
+    {
+        "id": "32",
+        "nom": "Tomb of the River"
+    },
+    {
+        "id":"33",
+        "nom":"Transporter"
+    },
+    {
+        "id": "34",
+        "nom": "Riverdale"
+    },
+    {
+        "id": "35",
+        "nom": "Troll"
+    },
+    {
+        "id": "36",
+        "nom": "Ivanna"
+    },
+    {
+        "id": "37",
+        "nom": "Jaula"
+    },
+    {
+        "id": "38",
+        "nom": "White Noise"
+    },
+    {
+        "id": "39",
+        "nom": "Wendell et White"
+    },
+    {
+        "id": "40",
+        "nom": "Nanny"
+    },
+    {
+        "id": "41",
+        "nom": "Kumari"
+    },
+    {
+        "id": "42",
+        "nom": "Phone Booth"
+    },
+    {
+        "id": "43",
+        "nom": "Fresh"
+    },
+    {
+        "id": "44",
+        "nom": "Retour a Zombieland"
+    },
+    {
+        "id": "45",
+        "nom": "Midsommar"
+    },
+    {
+        "id": "46",
+        "nom": "Hell Fest"
+    },
+    {
+        "id": "47",
+        "nom": "Velvet Buzzsaw"
+    },
+    {
+        "id": "48",
+        "nom": "Wedding Nightmare"
+    },
+    {
+        "id": "49",
+        "nom": "Litle Monsters"
+    },
+    {
+        "id": "50",
+        "nom": "Army of the Dead"
+    },
+    {
+        "id": "51",
+        "nom": "Teddy"
+    },
+    {
+        "id": "52",
+        "nom": "Barbaque"
+    },
+    {
+        "id": "53",
+        "nom": "Freaky"
+    },
+    {
+        "id": "54",
+        "nom": "Lunettes noires"
+    },
+    {
+        "id": "55",
+        "nom": "Terrifier 1"
+    },
+    {
+        "id": "56",
+        "nom": "Terrifier 2"
+    },
+    {
+        "id": "57",
+        "nom": "X"
+    },
+    {
+        "id": "58",
+        "nom": "Sam Setu"
+    },
+    {
+        "id": "59",
+        "nom": "Morbius"
+    },
+    {
+        "id": "60",
+        "nom": "Mili"
+    },
+    {
+        "id": "61",
+        "nom": "Gatta Kusthi"
+    },
+    {
+        "id": "62",
+        "nom": "Pinocchio"
+    },
+    {
+        "id": "63",
+        "nom": "Obelix"
+    },
+    {
+        "id": "64",
+        "nom": "Asterix"
+    },
+    {
+        "id": "65",
+        "nom": "The Wedding Party 1"
+    },
+    {
+        "id": "66",
+        "nom": "The Wedding Party 2"
+    },
+    {
+        "id": "67",
+        "nom": "Lionheart"
+    },
+    {
+        "id": "68",
+        "nom": "Paris a tout Prix"
+    },
+    {
+        "id": "69",
+        "nom": "The Pale Blue Eye"
+    },
+    {
+        "id": "70",
+        "nom": "Don"
+    },
+    {
+        "id": "71",
+        "nom": "Carter"
+    },
+    {
+        "id": "72",
+        "nom": "The Contractor"
+    },
+    {
+        "id": "73",
+        "nom": "Interceptor"
+    },
+    {
+        "id": "74",
+        "nom": "The Man From Toronto"
+    },
+    {
+        "id": "75",
+        "nom": "Vengeance aux poings"
+    },
+    {
+        "id": "76",
+        "nom": "Paris a tout Prix"
+    },
+    {
+        "id": "77",
+        "nom": "The Grey Man"
+    },
+    {
+        "id": "78",
+        "nom": "Hancock"
+    },
+    {
+        "id": "79",
+        "nom": "Lou"
+    },
+    {
+        "id": "80",
+        "nom": "Memoire meurtriere"
+    },
+    {
+        "id": "81",
+        "nom": "Le Samaritain"
+    },
+    {
+        "id": "82",
+        "nom": "Adam a travers le temps"
+    },
+    {
+        "id": "83",
+        "nom": "Loin du periph"
+    },
+    {
+        "id": "84",
+        "nom": "FIR"
+    },
+    {
+        "id": "85",
+        "nom": "Heropanti 1"
+    },
+    {
+        "id": "86",
+        "nom": "Heropanti 2"
+    },
+    {
+        "id": "87",
+        "nom": "Anek"
+    },
+    {
+        "id": "88",
+        "nom": "Centauro"
+    },
+    {
+        "id": "89",
+        "nom": "Runway 34"
+    },
+    {
+        "id": "90",
+        "nom": "Mat Kilau"
+    },
+    {
+        "id": "91",
+        "nom": "Shamshera"
+    },
+    {
+        "id": "92",
+        "nom": "Godfather"
+    },
+    {
+        "id": "93",
+        "nom": "Blackout"
+    },
+    {
+        "id": "94",
+        "nom": "Godse"
+    },
+    {
+        "id": "95",
+        "nom": "Thar : les trois cibles"
+    },
+    {
+        "id": "96",
+        "nom": "Black Crab"
+    },
+    {
+        "id": "97",
+        "nom": "Meet Cute"
+    },
+    {
+        "id": "98",
+        "nom": "Entergalactic"
+    },
+    {
+        "id": "99",
+        "nom": "Un accord parfait"
+    },
+    {
+        "id": "100",
+        "nom": "About Fate"
+    }
+]
